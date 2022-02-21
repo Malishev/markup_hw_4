@@ -1,0 +1,190 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 1 exercise  */
+.page_wraper {
+  width: 100%;
+  overflow: hidden;
+}
+.container {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #0d5825;
+}
+.cards {
+  position: relative;
+}
+blockquote {
+  transform: translateY(40px);
+}
+q,
+cite {
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+.img {
+  width: 150px;
+  transition: transform 0.5s ease;
+}
+.card {
+  display: inline-block;
+  position: absolute;
+}
+.first {
+  top: 200px;
+  left: 300px;
+  transform: rotate(15deg);
+}
+.second {
+  top: 180px;
+  left: 240px;
+  transform: rotate(-6deg);
+}
+.third {
+  top: 180px;
+  left: 180px;
+  transform: rotate(-25deg);
+}
+.img:hover {
+  transform: translateY(-20px);
+}
+/* 2 exercise */
+
+.box {
+  width: 500px;
+  height: 500px;
+  margin: 20px auto;
+  position: relative;
+}
+.square {
+  width: 250px;
+  height: 250px;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  position: absolute;
+  background-color: blue;
+  left: 25%;
+  top: 25%;
+  z-index: 1;
+}
+.green {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: green;
+}
+/* 3 exercise */
+.text {
+  color: white;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.main {
+  width: 600px;
+  height: 600px;
+}
+.menu {
+  width: 300px;
+  height: 100%;
+  border: 1px solid rgb(77, 75, 75); /*тут вопрос есть*/
+  background-color: grey;
+  position: relative;
+  transform: translateX(-89%);
+  transition: transform 1s ease;
+}
+.menu:hover {
+  transform: translateX(0);
+}
+.menu:hover .menu_line {
+  visibility: hidden;
+  transition-delay: 0.1s;
+}
+
+.menu_item {
+  display: block;
+  margin-top: 60px;
+}
+.menu_item li {
+  list-style: none;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.menu_item li::before {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  transform: rotate(45deg);
+  border: 1px solid black;
+  background-color: orange;
+  margin-right: 7px;
+}
+.menu_item {
+  display: block;
+  margin-top: 60px;
+}
+.menu_item a {
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+.menu_item a:hover {
+  color: orange;
+}
+.menu_line {
+  display: block;
+  width: 40px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+
+/* 4 exercise */
+
+.main_animation {
+  width: 400px;
+  height: 400px;
+  margin-top: 100px;
+}
+.animation {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: anim 4s infinite ease;
+}
+@keyframes anim {
+  0% {
+    left: 0;
+    top: 0;
+    background-color: red;
+  }
+  25% {
+    left: 0;
+    top: 300px;
+    background-color: blue;
+  }
+  50% {
+    left: 300px;
+    top: 300px;
+    background-color: green;
+  }
+  75% {
+    left: 300px;
+    top: 0;
+    background-color: yellow;
+  }
+  100% {
+    left: 0;
+    top: 0;
+    background-color: red;
+  }
+}
